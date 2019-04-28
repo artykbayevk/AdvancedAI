@@ -56,8 +56,8 @@ plt.show()
 
 
 plt.style.use("ggplot")
-plt.plot(np.arange(0, 1000), cnn_rt_acc,label = 'categorical accuracy')
-plt.plot(np.arange(0, 1000), cnn_rt_val_acc,label = 'val categorical accuracy')
+plt.plot(np.arange(0, 100), cnn_rt_acc[:100],label = 'categorical accuracy')
+plt.plot(np.arange(0, 100), cnn_rt_val_acc[:100],label = 'val categorical accuracy')
 plt.title("Categorical Accuracy. CNN-RT")
 plt.xlabel("Epoch #")
 plt.ylabel("Accuracy")
@@ -76,8 +76,8 @@ lstm_tw_mean_absolute_error = lstm_tw_history['mean_absolute_error']
 
 
 plt.style.use("ggplot")
-plt.plot(np.arange(0, 100), lstm_tw_loss,label = 'categorical crossentropy')
-plt.plot(np.arange(0, 100), lstm_tw_mean_absolute_error,label = 'mean absolute error')
+plt.plot(np.arange(0, 100), lstm_tw_loss[:100],label = 'categorical crossentropy')
+plt.plot(np.arange(0, 100), lstm_tw_mean_absolute_error[:100],label = 'mean absolute error')
 plt.title("Categorical Crossentropy and MAE. LSTM-Twitter140")
 plt.xlabel("Epoch #")
 plt.ylabel("Loss")
