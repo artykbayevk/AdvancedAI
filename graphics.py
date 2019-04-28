@@ -45,9 +45,9 @@ cnn_rt_val_acc = cnn_rt_history['val_acc']
 cnn_rt_mae = cnn_rt_history['val_mean_absolute_error']
 
 plt.style.use("ggplot")
-plt.plot(np.arange(0, 1000), cnn_rt_loss,label = 'categorical crossentropy')
-plt.plot(np.arange(0, 1000), cnn_rt_mean_absolute_error,label = 'mean absolute error')
-plt.plot(np.arange(0, 1000), cnn_rt_mae,label = 'val mean absolute error')
+plt.plot(np.arange(0, 100), cnn_rt_loss[:100],label = 'categorical crossentropy')
+plt.plot(np.arange(0, 100), cnn_rt_mean_absolute_error[:100],label = 'mean absolute error')
+plt.plot(np.arange(0, 100), cnn_rt_mae[:100],label = 'val mean absolute error')
 plt.title("Categorical Crossentropy and MAE. CNN-RT")
 plt.xlabel("Epoch #")
 plt.ylabel("Loss")
